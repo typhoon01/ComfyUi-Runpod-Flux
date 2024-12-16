@@ -44,7 +44,7 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-  "https://civitai.com/api/download/models/724149"
+  "https://civitai.com/api/download/models/724149?token=$CIVITAI_TOKEN"
 	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
 	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
@@ -60,8 +60,8 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/WelmoedS.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Chaeryoung.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/parkseyoung.safetensors"
-	"https://civitai.com/api/download/models/1042631?type=Model&format=SafeTensor"
-	"https://civitai.com/api/download/models/1041808?type=Model&format=SafeTensor"
+	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN"
+	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN"
 )
 
 VAE_MODELS=(
@@ -278,9 +278,9 @@ function provisioning_has_valid_civitai_token() {
 function provisioning_download() {
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
+#    elif
+#        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+#        auth_token="$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
         wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
