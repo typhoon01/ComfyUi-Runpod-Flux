@@ -44,7 +44,7 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-  "https://civitai.com/api/download/models/724149?token=$CIVITAI_TOKEN"
+  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
 	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
 	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
@@ -60,8 +60,8 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/WelmoedS.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Chaeryoung.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/parkseyoung.safetensors"
-	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN"
-	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN"
+	"https://civitai.com/api/download/models/1042631?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
+	"https://civitai.com/api/download/models/1041808?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
 )
 
 VAE_MODELS=(
