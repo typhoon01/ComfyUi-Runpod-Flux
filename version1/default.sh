@@ -45,6 +45,7 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
   "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
+  "https://civitai.com/api/download/models/1171165?token=$CIVITAI_TOKEN"
 	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
 	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
@@ -60,8 +61,17 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/WelmoedS.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Chaeryoung.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/parkseyoung.safetensors"
-	"https://civitai.com/api/download/models/1042631?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
-	"https://civitai.com/api/download/models/1041808?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/LimNayoung.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/EmmaRoberts.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/JudyBlooms.safetensors"
+	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
+	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
+	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
+	"https://civitai.com/api/download/models/807471?token=$CIVITAI_TOKEN" #KajalAggarwalFlux
+	"https://civitai.com/api/download/models/1054261?token=$CIVITAI_TOKEN" #Famke Louise
+	"https://civitai.com/api/download/models/1015593?token=$CIVITAI_TOKEN" #Dilan Yesilgoz
+	"https://civitai.com/api/download/models/825641?token=$CIVITAI_TOKEN" #EmmaWatsonFlux
+	"https://civitai.com/api/download/models/802256?token=$CIVITAI_TOKEN" #CobieSmuldersFlux
 )
 
 VAE_MODELS=(
