@@ -70,8 +70,20 @@ LORA_MODELS=(
 	"https://civitai.com/api/download/models/807471?token=$CIVITAI_TOKEN" #KajalAggarwalFlux
 	"https://civitai.com/api/download/models/1054261?token=$CIVITAI_TOKEN" #Famke Louise
 	"https://civitai.com/api/download/models/1015593?token=$CIVITAI_TOKEN" #Dilan Yesilgoz
-	"https://civitai.com/api/download/models/825641?token=$CIVITAI_TOKEN" #EmmaWatsonFlux
 	"https://civitai.com/api/download/models/802256?token=$CIVITAI_TOKEN" #CobieSmuldersFlux
+	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #Emma Watson
+	"https://civitai.com/api/download/models/743867?token=$CIVITAI_TOKEN" #Anne Hatheway
+	"https://civitai.com/api/download/models/806759?token=$CIVITAI_TOKEN" #Nathalie Dormer
+	"https://civitai.com/api/download/models/742990?token=$CIVITAI_TOKEN" #Daenerys
+	"https://civitai.com/api/download/models/1010324?token=$CIVITAI_TOKEN" #Cersei
+	"https://civitai.com/api/download/models/917492?token=$CIVITAI_TOKEN" #Maisie Williams
+	"https://civitai.com/api/download/models/918814?token=$CIVITAI_TOKEN" #Sophie Turner
+	"https://civitai.com/api/download/models/1019587?token=$CIVITAI_TOKEN" #Melisandre
+	"https://civitai.com/api/download/models/1003893?token=$CIVITAI_TOKEN" #Margaey
+	"https://civitai.com/api/download/models/903017?token=$CIVITAI_TOKEN" #Missandei
+	"https://civitai.com/api/download/models/1034653?token=$CIVITAI_TOKEN" #Olivia Cook
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 )
 
 VAE_MODELS=(
