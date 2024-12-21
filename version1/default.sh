@@ -82,6 +82,17 @@ LORA_MODELS=(
 	"https://civitai.com/api/download/models/1003893?token=$CIVITAI_TOKEN" #Margaey
 	"https://civitai.com/api/download/models/903017?token=$CIVITAI_TOKEN" #Missandei
 	"https://civitai.com/api/download/models/1034653?token=$CIVITAI_TOKEN" #Olivia Cook
+	"https://civitai.com/api/download/models/1180549?token=$CIVITAI_TOKEN" #apprehensive frown
+	"https://civitai.com/api/download/models/1163422?token=$CIVITAI_TOKEN" #creating a "shh" gesture
+	"https://civitai.com/api/download/models/1154511?token=$CIVITAI_TOKEN" #Mischievous look #Eyes slightly squinted
+	"https://civitai.com/api/download/models/957332?token=$CIVITAI_TOKEN" #sxxxymouth
+	"https://civitai.com/api/download/models/1031952?token=$CIVITAI_TOKEN" #Blowbang
+	"https://civitai.com/api/download/models/1174465?token=$CIVITAI_TOKEN" #Red ribbon body wrap
+	"https://civitai.com/api/download/models/1119737?token=$CIVITAI_TOKEN" #gagged with large b4llg4g in her mouth with rivets and leather strap
+	"https://civitai.com/api/download/models/906108?token=$CIVITAI_TOKEN" #a woman using her tongue to mhblckng a penis
+	"https://civitai.com/api/download/models/897171?token=$CIVITAI_TOKEN" #a woman mhbsckng on a man's penis
+	"https://civitai.com/api/download/models/820465?token=$CIVITAI_TOKEN" #ffk, girl, pov, blowjob, penis,
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 )
