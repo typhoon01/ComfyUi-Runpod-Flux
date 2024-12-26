@@ -45,7 +45,7 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
   "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
-  "https://civitai.com/api/download/models/1052470?token=$CIVITAI_TOKEN" #Acorn is spinning flux
+#  "https://civitai.com/api/download/models/1052470?token=$CIVITAI_TOKEN" #Acorn is spinning flux
 #  "https://civitai.com/api/download/models/1171165?token=$CIVITAI_TOKEN" #STOIQO Afrodite
 	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
@@ -65,6 +65,8 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/LimNayoung.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/EmmaRoberts.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/JudyBlooms.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/seulgi.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/sarahrafferty.safetensors"
 	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
 	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
 	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
