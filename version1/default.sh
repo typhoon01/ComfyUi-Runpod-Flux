@@ -66,6 +66,7 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/EmmaRoberts.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/JudyBlooms.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/seulgi.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/joy_fal.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/sarahrafferty.safetensors"
 	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
 	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
