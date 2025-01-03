@@ -29,6 +29,8 @@ NODES=(
 	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 	"https://github.com/ai-shizuka/ComfyUI-tbox"
 	"https://github.com/krich-cto/ComfyUI-Flow-Control"
+	"https://github.com/fairy-root/Flux-Prompt-Generator"
+	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
 WORKFLOWS=(
@@ -96,9 +98,13 @@ LORA_MODELS=(
 	"https://civitai.com/api/download/models/906108?token=$CIVITAI_TOKEN" #a woman using her tongue to mhblckng a penis
 	"https://civitai.com/api/download/models/897171?token=$CIVITAI_TOKEN" #a woman mhbsckng on a man's penis
 	"https://civitai.com/api/download/models/820465?token=$CIVITAI_TOKEN" #ffk, girl, pov, blowjob, penis,
+	"https://civitai.com/api/download/models/1147646?token=$CIVITAI_TOKEN" #yvonflx, Yvonne Strahovski
+	"https://civitai.com/api/download/models/824045?token=$CIVITAI_TOKEN" #Meghan Markle
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+
 )
 
 VAE_MODELS=(
@@ -110,6 +116,7 @@ ESRGAN_MODELS=(
     #"https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
 #    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    "https://huggingface.co/Phips/4xNomos8kDAT/resolve/main/4xNomos8kDAT.safetensors"
 )
 
 CONTROLNET_MODELS=(
