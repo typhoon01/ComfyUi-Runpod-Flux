@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
+#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
 HF_TOKEN=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
 CIVITAI_TOKEN=94357d4aea57e1767b010b7e692218f7
 
