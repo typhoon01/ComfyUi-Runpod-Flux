@@ -21,7 +21,7 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-	"https://github.com/ltdrdata/ComfyUI-Manager"
+#	"https://github.com/ltdrdata/ComfyUI-Manager"
 	"https://github.com/cubiq/ComfyUI_essentials"
 	"https://github.com/rgthree/rgthree-comfy"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux"
