@@ -49,6 +49,7 @@ UNET_MODELS=(
   "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
 #  "https://civitai.com/api/download/models/1052470?token=$CIVITAI_TOKEN" #Acorn is spinning flux
 #  "https://civitai.com/api/download/models/1171165?token=$CIVITAI_TOKEN" #STOIQO Afrodite
+  "https://civitai.com/api/download/models/1036974token=$CIVITAI_TOKEN" #getphat FLUX Reality NSFW
 	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
 	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
 	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
