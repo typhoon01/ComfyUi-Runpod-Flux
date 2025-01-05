@@ -30,7 +30,7 @@ NODES=(
 	"https://github.com/ai-shizuka/ComfyUI-tbox"
 	"https://github.com/krich-cto/ComfyUI-Flow-Control"
 #	"https://github.com/fairy-root/Flux-Prompt-Generator"
-	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
+#	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
 WORKFLOWS=(
