@@ -29,7 +29,7 @@ NODES=(
 	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 	"https://github.com/ai-shizuka/ComfyUI-tbox"
 	"https://github.com/krich-cto/ComfyUI-Flow-Control"
-	"https://github.com/fairy-root/Flux-Prompt-Generator"
+#	"https://github.com/fairy-root/Flux-Prompt-Generator"
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
 
@@ -70,7 +70,9 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/seulgi.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/joy_fal.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/sarahrafferty.safetensors"
-	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Shelly_fal.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Shelly_fal.safetensors" #Shelly
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_1.safetensors" #Mrsd
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_2.safetensors" #mrsd
 	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
 	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
 	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
