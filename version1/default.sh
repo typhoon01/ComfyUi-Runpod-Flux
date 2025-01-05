@@ -28,7 +28,7 @@ NODES=(
 	"https://github.com/city96/ComfyUI-GGUF"
 	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 	"https://github.com/ai-shizuka/ComfyUI-tbox"
-	"https://github.com/krich-cto/ComfyUI-Flow-Control"
+#	"https://github.com/krich-cto/ComfyUI-Flow-Control"
 	"https://github.com/fairy-root/Flux-Prompt-Generator"
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 )
