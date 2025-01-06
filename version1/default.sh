@@ -31,7 +31,7 @@ NODES=(
 #	"https://github.com/krich-cto/ComfyUI-Flow-Control"
 	"https://github.com/fairy-root/Flux-Prompt-Generator"
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
-	"https://github.com/marhensa/sdxl-recommended-res-calc"
+	"https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
 	"https://github.com/kijai/ComfyUI-KJNodes"
 	"https://github.com/crystian/ComfyUI-Crystools"
 )
