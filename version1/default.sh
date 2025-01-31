@@ -184,10 +184,10 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
         "${INSIGHTFACE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/workspace/ComfyUI/models/pulid/" \
+        "${WORKSPACE}/ComfyUI/models/pulid/" \
         "${PULID_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/workspace/ComfyUI/models/llm_gguf/" \
+        "${WORKSPACE}/ComfyUI/models/llm_gguf/" \
         "${LLM_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
