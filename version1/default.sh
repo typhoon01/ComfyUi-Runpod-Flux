@@ -55,7 +55,7 @@ UNET_MODELS=(
 #  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
 		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
-		"https://civitai.com/api/download/models/1031531?type=Model&format=SafeTensor&size=full&fp=fp8" #iNiverse Mix
+		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
 )
 
 CLIP_MODELS=(
