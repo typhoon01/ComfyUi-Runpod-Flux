@@ -21,7 +21,7 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-#	"https://github.com/ltdrdata/ComfyUI-Manager"
+	"https://github.com/ltdrdata/ComfyUI-Manager"
 	"https://github.com/cubiq/ComfyUI_essentials"
 	"https://github.com/rgthree/rgthree-comfy"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux"
@@ -49,7 +49,7 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
+#  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
 #  "https://civitai.com/api/download/models/1052470?token=$CIVITAI_TOKEN" #Acorn is spinning flux
 #  "https://civitai.com/api/download/models/1171165?token=$CIVITAI_TOKEN" #STOIQO Afrodite
 #  "https://civitai.com/api/download/models/1036974token=$CIVITAI_TOKEN" #getphat FLUX Reality NSFW
