@@ -129,6 +129,10 @@ PULID_MODELS=(
   "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.1.safetensors"
 )
 
+LLM_MODELS=(
+  "https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+)
+
 CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
@@ -180,8 +184,11 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
         "${INSIGHTFACE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/pulid" \
+        "${WORKSPACE}/workspace/ComfyUI/models/pulid/" \
         "${PULID_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/workspace/ComfyUI/models/llm_gguf/" \
+        "${LLM_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
 }
