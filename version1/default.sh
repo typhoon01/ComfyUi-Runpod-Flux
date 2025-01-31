@@ -24,16 +24,19 @@ NODES=(
 	"https://github.com/ltdrdata/ComfyUI-Manager"
 	"https://github.com/cubiq/ComfyUI_essentials"
 	"https://github.com/rgthree/rgthree-comfy"
-	"https://github.com/Fannovel16/comfyui_controlnet_aux"
+  "https://github.com/Fannovel16/comfyui_controlnet_aux"
 	"https://github.com/city96/ComfyUI-GGUF"
 	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-	"https://github.com/ai-shizuka/ComfyUI-tbox"
-#	"https://github.com/krich-cto/ComfyUI-Flow-Control"
-	"https://github.com/fairy-root/Flux-Prompt-Generator"
+	"https://github.com/WASasquatch/was-node-suite-comfyui"
 	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
 	"https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
 	"https://github.com/kijai/ComfyUI-KJNodes"
 	"https://github.com/crystian/ComfyUI-Crystools"
+	"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+	"https://github.com/lldacing/ComfyUI_PuLID_Flux_ll"
+	"https://github.com/SeargeDP/ComfyUI_Searge_LLM"
+	"https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+
 )
 
 WORKFLOWS=(
@@ -50,12 +53,6 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
 #  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
-#  "https://civitai.com/api/download/models/1052470?token=$CIVITAI_TOKEN" #Acorn is spinning flux
-#  "https://civitai.com/api/download/models/1171165?token=$CIVITAI_TOKEN" #STOIQO Afrodite
-#  "https://civitai.com/api/download/models/1036974token=$CIVITAI_TOKEN" #getphat FLUX Reality NSFW
-	#"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/flux1-dev.sft"
-	#"https://civitai.com/api/download/models/748062?type=Model&format=Diffusers&size=pruned&fp=fp16"
-	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
 		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
 		"https://civitai.com/api/download/models/1031531?type=Model&format=SafeTensor&size=full&fp=fp8" #iNiverse Mix
@@ -64,6 +61,8 @@ UNET_MODELS=(
 CLIP_MODELS=(
 	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/clip_l.safetensors"
 	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors"
+	"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+	"https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt"
 )
 
 LORA_MODELS=(
@@ -80,6 +79,9 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Shelly_fal.safetensors" #Shelly
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_1.safetensors" #Mrsd
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_2.safetensors" #mrsd
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jennie_fal.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jessica_fal.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Katja_fal.safetensors"
 	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
 	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
 	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
@@ -95,7 +97,7 @@ LORA_MODELS=(
 	"https://civitai.com/api/download/models/917492?token=$CIVITAI_TOKEN" #Maisie Williams
 	"https://civitai.com/api/download/models/918814?token=$CIVITAI_TOKEN" #Sophie Turner
 	"https://civitai.com/api/download/models/1019587?token=$CIVITAI_TOKEN" #Melisandre
-	"https://civitai.com/api/download/models/1003893?token=$CIVITAI_TOKEN" #Margaey
+	"https://civitai.com/api/download/models/1003893?token=$CIVITAI_TOKEN" #Margaery
 	"https://civitai.com/api/download/models/903017?token=$CIVITAI_TOKEN" #Missandei
 	"https://civitai.com/api/download/models/1034653?token=$CIVITAI_TOKEN" #Olivia Cook
 	"https://civitai.com/api/download/models/1147646?token=$CIVITAI_TOKEN" #yvonflx, Yvonne Strahovski
@@ -105,54 +107,29 @@ LORA_MODELS=(
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 #	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
 
-#	"https://civitai.com/api/download/models/1180549?token=$CIVITAI_TOKEN" #apprehensive frown
-#	"https://civitai.com/api/download/models/1163422?token=$CIVITAI_TOKEN" #creating a "shh" gesture
-#	"https://civitai.com/api/download/models/1154511?token=$CIVITAI_TOKEN" #Mischievous look #Eyes slightly squinted
-#	"https://civitai.com/api/download/models/957332?token=$CIVITAI_TOKEN" #sxxxymouth
-#	"https://civitai.com/api/download/models/1031952?token=$CIVITAI_TOKEN" #Blowbang
-#	"https://civitai.com/api/download/models/1174465?token=$CIVITAI_TOKEN" #Red ribbon body wrap
-#	"https://civitai.com/api/download/models/1119737?token=$CIVITAI_TOKEN" #gagged with large b4llg4g in her mouth with rivets and leather strap
-#	"https://civitai.com/api/download/models/906108?token=$CIVITAI_TOKEN" #a woman using her tongue to mhblckng a penis
-#	"https://civitai.com/api/download/models/897171?token=$CIVITAI_TOKEN" #a woman mhbsckng on a man's penis
-#	"https://civitai.com/api/download/models/820465?token=$CIVITAI_TOKEN" #ffk, girl, pov, blowjob, penis,
-
 )
 
 VAE_MODELS=(
     "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
-    #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
-    #"https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-#    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/Phips/4xNomos8kDAT/resolve/main/4xNomos8kDAT.safetensors"
 )
 
+INSIGHTFACE_MODELS=(
+    "https://huggingface.co/typhoon01/aux_models/resolve/main/1k3d68.onnx"
+    "https://huggingface.co/typhoon01/aux_models/resolve/main/2d106det.onnx"
+    "https://huggingface.co/typhoon01/aux_models/resolve/main/genderage.onnx"
+    "https://huggingface.co/typhoon01/aux_models/resolve/main/glintr100.onnx"
+    "https://huggingface.co/typhoon01/aux_models/resolve/main/scrfd_10g_bnkps.onnx"
+)
+
+PULID_MODELS=(
+  "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.1.safetensors"
+)
+
 CONTROLNET_MODELS=(
-#	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-hed-controlnet-v3.safetensors"
-#	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-canny-controlnet-v3.safetensors"
-#	"https://huggingface.co/XLabs-AI/flux-controlnet-collections/resolve/main/flux-depth-controlnet-v3.safetensors"
-    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
-    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors"
-    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
-    #"https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_normal-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_color-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_depth-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_keypose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
@@ -199,6 +176,12 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
+        "${INSIGHTFACE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/pulid" \
+        "${PULID_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
 }
