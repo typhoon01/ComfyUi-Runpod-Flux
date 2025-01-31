@@ -58,6 +58,7 @@ UNET_MODELS=(
 	#"https://civitai.com/api/download/models/789499?type=Model&format=Diffusers&size=pruned&fp=fp16"
 		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
+		"https://civitai.com/api/download/models/1031531?type=Model&format=SafeTensor&size=full&fp=fp8" #iNiverse Mix
 )
 
 CLIP_MODELS=(
