@@ -37,6 +37,29 @@ NODES=(
 	"https://github.com/SeargeDP/ComfyUI_Searge_LLM"
 	"https://github.com/Jonseed/ComfyUI-Detail-Daemon"
 
+	#hunyuan
+	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+	"https://github.com/chengzeyi/Comfy-WaveSpeed"
+
+	#wip
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+	"https://github.com/chflame163/ComfyUI_LayerStyle"
+	"https://github.com/yolain/ComfyUI-Easy-Use"
+	"https://github.com/jags111/efficiency-nodes-comfyui"
+	"https://github.com/chrisgoringe/cg-use-everywhere"
+	"https://github.com/stavsap/comfyui-ollama"
+	"https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg"
+	"https://github.com/erosDiffusion/ComfyUI-enricos-nodes"
+	"https://github.com/Smirnov75/ComfyUI-mxToolkit"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+	"https://github.com/gseth/ControlAltAI-Nodes"
+	"https://github.com/jags111/ComfyUI_Jags_VectorMagic"
+	"https://github.com/storyicon/comfyui_segment_anything"
+	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+	"https://github.com/giriss/comfy-image-saver"
+	"https://github.com/chibiace/ComfyUI-Chibi-Nodes"
+
+
 )
 
 WORKFLOWS=(
@@ -56,6 +79,9 @@ UNET_MODELS=(
 		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
 		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
+
+		#hunyuan
+		#"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
 )
 
 CLIP_MODELS=(
@@ -63,6 +89,9 @@ CLIP_MODELS=(
 	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors"
 	"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 	"https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt"
+
+	#hunyuan
+	#"https://huggingface.co/calcuis/hunyuan-gguf/resolve/main/llava_llama3_fp8_scaled.safetensors"
 )
 
 LORA_MODELS=(
@@ -111,10 +140,14 @@ LORA_MODELS=(
 
 VAE_MODELS=(
     "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
+
+    #hunyuan
+    #"https://huggingface.co/calcuis/hunyuan-gguf/resolve/main/hunyuan_video_vae_bf16.safetensors"
 )
 
 ESRGAN_MODELS=(
     "https://huggingface.co/Phips/4xNomos8kDAT/resolve/main/4xNomos8kDAT.safetensors"
+    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
 )
 
 INSIGHTFACE_MODELS=(
