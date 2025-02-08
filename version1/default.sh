@@ -58,7 +58,10 @@ NODES=(
 	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
 	"https://github.com/giriss/comfy-image-saver"
 	"https://github.com/chibiace/ComfyUI-Chibi-Nodes"
-
+	"https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
+	"https://github.com/TripleHeadedMonkey/ComfyUI_MileHighStyler"
+	"https://codeberg.org/Gourieff/comfyui-reactor-node.git"
+	"https://github.com/lldacing/ComfyUI_Patches_ll"
 
 )
 
@@ -77,7 +80,7 @@ CHECKPOINT_MODELS=(
 UNET_MODELS=(
 #  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
 		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
-		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
+#		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
 		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
 
 		#hunyuan
@@ -111,6 +114,7 @@ LORA_MODELS=(
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jennie_fal.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jessica_fal.safetensors"
 	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Katja_fal.safetensors"
+	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Eliteloli_fal.safetensors"
 	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
 	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
 	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
@@ -148,9 +152,14 @@ VAE_MODELS=(
 ESRGAN_MODELS=(
     "https://huggingface.co/Phips/4xNomos8kDAT/resolve/main/4xNomos8kDAT.safetensors"
     "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+    "https://huggingface.co/naonovn/total/resolve/main/x1_ITF_SkinDiffDetail_Lite_v1.pth"
 )
 
 INSIGHTFACE_MODELS=(
+    "https://huggingface.co/Devia/G/resolve/main/inswapper_128.onnx"
+)
+
+ANTELOPE_MODELS=(
     "https://huggingface.co/typhoon01/aux_models/resolve/main/1k3d68.onnx"
     "https://huggingface.co/typhoon01/aux_models/resolve/main/2d106det.onnx"
     "https://huggingface.co/typhoon01/aux_models/resolve/main/genderage.onnx"
@@ -164,6 +173,10 @@ PULID_MODELS=(
 
 LLM_MODELS=(
   "https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+)
+
+ULTRALYTICS_MODELS=(
+  "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
 )
 
 CONTROLNET_MODELS=(
@@ -214,14 +227,23 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
         "${INSIGHTFACE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
+        "${ANTELOPE_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/pulid/" \
         "${PULID_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/llm_gguf/" \
         "${LLM_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ultralytics/segm/" \
+        "${ULTRALYTICS_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/Yolov8/" \
+        "${ULTRALYTICS_MODELS[@]}"
     provisioning_get_workflows
     provisioning_print_end
 }
