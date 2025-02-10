@@ -79,9 +79,9 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
 #  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
-		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
+#		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 #		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
-		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
+#		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
 
 		#hunyuan
 		#"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
