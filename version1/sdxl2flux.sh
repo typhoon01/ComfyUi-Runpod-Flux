@@ -45,6 +45,11 @@ NODES=(
 	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
 	"https://github.com/SeargeDP/SeargeSDXL"
 	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+	"https://github.com/city96/SD-Latent-Interposer"
+	"https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
+	"https://github.com/Extraltodeus/ComfyUI-AutomaticCFG"
 
 	#hunyuan
 #	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
@@ -215,7 +220,7 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/checkpoints/SDXL" \
+        "${WORKSPACE}/ComfyUI/models/checkpoints/SDXL" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
