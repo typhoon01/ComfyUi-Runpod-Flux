@@ -37,14 +37,14 @@ NODES=(
 	"https://github.com/SeargeDP/ComfyUI_Searge_LLM"
 	"https://github.com/Jonseed/ComfyUI-Detail-Daemon"
 
-#	"https://github.com/ealkanat/comfyui-easy-padding"
-#	"https://github.com/chrisgoringe/cg-use-everywhere"
-#	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
-#	"https://github.com/yolain/ComfyUI-Easy-Use"
-#	"https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
-#	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
-#	"https://github.com/SeargeDP/SeargeSDXL"
-#	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+	"https://github.com/ealkanat/comfyui-easy-padding"
+	"https://github.com/chrisgoringe/cg-use-everywhere"
+	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+	"https://github.com/yolain/ComfyUI-Easy-Use"
+	"https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
+	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+	"https://github.com/SeargeDP/SeargeSDXL"
+	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 
 	#hunyuan
 #	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
@@ -79,18 +79,18 @@ WORKFLOWS=(
 )
 
 CHECKPOINT_MODELS=(
-	#"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-	#"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
+	"https://civitai.com/api/download/models/695277?token=$CIVITAI_TOKEN" #https://civitai.com/models/428826/damn-ponyxl-realistic-model
+	"https://civitai.com/api/download/models/708635?token=$CIVITAI_TOKEN" #https://civitai.com/models/573152?modelVersionId=708635
 	#"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
 	#"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 	#"https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
 )
 
 UNET_MODELS=(
-#  "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
-		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
+    "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
+#		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
 #		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
-		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
+#		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
 
 		#hunyuan
 		#"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
@@ -98,7 +98,7 @@ UNET_MODELS=(
 
 CLIP_MODELS=(
 	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/clip_l.safetensors"
-	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors"
+#	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors"
 	"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 	"https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt"
 
@@ -215,7 +215,7 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
+        "${WORKSPACE}/storage/stable_diffusion/models/checkpoints/SDXL" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
