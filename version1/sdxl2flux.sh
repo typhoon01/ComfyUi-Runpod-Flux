@@ -84,8 +84,8 @@ WORKFLOWS=(
 )
 
 CHECKPOINT_MODELS=(
-	"https://civitai.com/api/download/models/695277?token=$CIVITAI_TOKEN" #https://civitai.com/models/428826/damn-ponyxl-realistic-model
-	"https://civitai.com/api/download/models/708635?token=$CIVITAI_TOKEN" #https://civitai.com/models/573152?modelVersionId=708635
+#	"https://civitai.com/api/download/models/695277?token=$CIVITAI_TOKEN" #https://civitai.com/models/428826/damn-ponyxl-realistic-model
+#	"https://civitai.com/api/download/models/708635?token=$CIVITAI_TOKEN" #https://civitai.com/models/573152?modelVersionId=708635
 	#"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
 	#"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 	#"https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
@@ -186,7 +186,7 @@ PULID_MODELS=(
 )
 
 LLM_MODELS=(
-  "https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+#  "https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
 )
 
 ULTRALYTICS_MODELS=(
