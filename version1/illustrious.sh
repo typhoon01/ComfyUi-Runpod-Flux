@@ -1,0 +1,411 @@
+#!/bin/bash
+
+# This file will be sourced in init.sh
+
+# https://github.com/MushroomFleet/Runpod-init
+
+# Packages are installed after nodes so we can fix them...
+
+#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
+HF_TOKEN=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
+CIVITAI_TOKEN=94357d4aea57e1767b010b7e692218f7
+
+APT_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
+PIP_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
+NODES=(
+#	"https://github.com/ltdrdata/ComfyUI-Manager"
+#	"https://github.com/cubiq/ComfyUI_essentials"
+#	"https://github.com/rgthree/rgthree-comfy"
+#  "https://github.com/Fannovel16/comfyui_controlnet_aux"
+#	"https://github.com/city96/ComfyUI-GGUF"
+#	"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+#	"https://github.com/WASasquatch/was-node-suite-comfyui"
+#	"https://github.com/KoreTeknology/ComfyUI-Universal-Styler"
+#	"https://github.com/JPS-GER/ComfyUI_JPS-Nodes"
+#	"https://github.com/kijai/ComfyUI-KJNodes"
+#	"https://github.com/crystian/ComfyUI-Crystools"
+#	"https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+#	"https://github.com/lldacing/ComfyUI_PuLID_Flux_ll"
+#	"https://github.com/SeargeDP/ComfyUI_Searge_LLM"
+#	"https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+#
+#	"https://github.com/ealkanat/comfyui-easy-padding"
+#	"https://github.com/chrisgoringe/cg-use-everywhere"
+#	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+#	"https://github.com/yolain/ComfyUI-Easy-Use"
+#	"https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
+#	"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+#	"https://github.com/SeargeDP/SeargeSDXL"
+#	"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+#	"https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+#	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+#	"https://github.com/city96/SD-Latent-Interposer"
+#	"https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch"
+#	"https://github.com/Extraltodeus/ComfyUI-AutomaticCFG"
+
+	#hunyuan
+#	"https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+#	"https://github.com/chengzeyi/Comfy-WaveSpeed"
+
+	#wip
+#	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+#	"https://github.com/chflame163/ComfyUI_LayerStyle"
+#	"https://github.com/yolain/ComfyUI-Easy-Use"
+#	"https://github.com/jags111/efficiency-nodes-comfyui"
+#	"https://github.com/chrisgoringe/cg-use-everywhere"
+#	"https://github.com/stavsap/comfyui-ollama"
+#	"https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg"
+#	"https://github.com/erosDiffusion/ComfyUI-enricos-nodes"
+#	"https://github.com/Smirnov75/ComfyUI-mxToolkit"
+#	"https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
+#	"https://github.com/gseth/ControlAltAI-Nodes"
+#	"https://github.com/jags111/ComfyUI_Jags_VectorMagic"
+#	"https://github.com/storyicon/comfyui_segment_anything"
+#	"https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+#	"https://github.com/giriss/comfy-image-saver"
+#	"https://github.com/chibiace/ComfyUI-Chibi-Nodes"
+#	"https://github.com/MaraScott/ComfyUI_MaraScott_Nodes"
+#	"https://github.com/TripleHeadedMonkey/ComfyUI_MileHighStyler"
+#	"https://codeberg.org/Gourieff/comfyui-reactor-node.git"
+#	"https://github.com/lldacing/ComfyUI_Patches_ll"
+
+)
+
+WORKFLOWS=(
+	#"https://github.com/MushroomFleet/DJZ-Workflows"
+)
+
+CHECKPOINT_MODELS=(
+#	"https://civitai.com/api/download/models/695277?token=$CIVITAI_TOKEN" #https://civitai.com/models/428826/damn-ponyxl-realistic-model
+#	"https://civitai.com/api/download/models/708635?token=$CIVITAI_TOKEN" #https://civitai.com/models/573152?modelVersionId=708635
+	#"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
+	#"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
+	#"https://civitai.com/api/download/models/979329?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+	"https://civitai.com/api/download/models/1761560?token=$CIVITAI_TOKEN"
+)
+
+UNET_MODELS=(
+#    "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
+#		"https://civitai.com/api/download/models/1115759?token=$CIVITAI_TOKEN" #Flux Dev Canny FP8
+#		"https://civitai.com/api/download/models/1110505?token=$CIVITAI_TOKEN" #Flux Dev Depth FP8
+#		"https://civitai.com/api/download/models/1031531?token=$CIVITAI_TOKEN" #iNiverse Mix
+
+		#hunyuan
+		#"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
+)
+
+CLIP_MODELS=(
+#	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/clip_l.safetensors"
+#	"https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/t5xxl_fp16.safetensors"
+#	"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+#	"https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt"
+
+	#hunyuan
+	#"https://huggingface.co/calcuis/hunyuan-gguf/resolve/main/llava_llama3_fp8_scaled.safetensors"
+)
+
+LORA_MODELS=(
+  "https://civitai.com/api/download/models/1729305?token=$CIVITAI_TOKEN"
+  "https://civitai.com/api/download/models/1793245?token=$CIVITAI_TOKEN"
+  "https://civitai.com/api/download/models/1726620?token=$CIVITAI_TOKEN"
+  "https://civitai.com/api/download/models/1720073?token=$CIVITAI_TOKEN"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/IreneFal.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/WelmoedS.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Chaeryoung.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/parkseyoung.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/LimNayoung.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/EmmaRoberts.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/JudyBlooms.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/seulgi.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/joy_fal.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/sarahrafferty.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Shelly_fal.safetensors" #Shelly
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_1.safetensors" #Mrsd
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Mrsd_fal_2.safetensors" #mrsd
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jennie_fal.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Jessica_fal.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Katja_fal.safetensors"
+#	"https://huggingface.co/typhoon01/Flux-lora-collection/resolve/main/Eliteloli_fal.safetensors"
+#	"https://civitai.com/api/download/models/1042631?token=$CIVITAI_TOKEN" #alexandrabotez
+#	"https://civitai.com/api/download/models/1041808?token=$CIVITAI_TOKEN" #andreabotez
+#	"https://civitai.com/api/download/models/1118819?token=$CIVITAI_TOKEN" #TrishaKrishnanFlux
+#	"https://civitai.com/api/download/models/807471?token=$CIVITAI_TOKEN" #KajalAggarwalFlux
+#	"https://civitai.com/api/download/models/1054261?token=$CIVITAI_TOKEN" #Famke Louise
+#	"https://civitai.com/api/download/models/1015593?token=$CIVITAI_TOKEN" #Dilan Yesilgoz
+#	"https://civitai.com/api/download/models/802256?token=$CIVITAI_TOKEN" #CobieSmuldersFlux
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #Emma Watson
+#	"https://civitai.com/api/download/models/743867?token=$CIVITAI_TOKEN" #Anne Hatheway
+#	"https://civitai.com/api/download/models/806759?token=$CIVITAI_TOKEN" #Nathalie Dormer
+#	"https://civitai.com/api/download/models/742990?token=$CIVITAI_TOKEN" #Daenerys
+#	"https://civitai.com/api/download/models/1010324?token=$CIVITAI_TOKEN" #Cersei
+#	"https://civitai.com/api/download/models/917492?token=$CIVITAI_TOKEN" #Maisie Williams
+#	"https://civitai.com/api/download/models/918814?token=$CIVITAI_TOKEN" #Sophie Turner
+#	"https://civitai.com/api/download/models/1019587?token=$CIVITAI_TOKEN" #Melisandre
+#	"https://civitai.com/api/download/models/1003893?token=$CIVITAI_TOKEN" #Margaery
+#	"https://civitai.com/api/download/models/903017?token=$CIVITAI_TOKEN" #Missandei
+#	"https://civitai.com/api/download/models/1034653?token=$CIVITAI_TOKEN" #Olivia Cook
+#	"https://civitai.com/api/download/models/1147646?token=$CIVITAI_TOKEN" #yvonflx, Yvonne Strahovski
+#	"https://civitai.com/api/download/models/824045?token=$CIVITAI_TOKEN" #Meghan Markle
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+#	"https://civitai.com/api/download/models/776691?token=$CIVITAI_TOKEN" #
+
+)
+
+VAE_MODELS=(
+#    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/ae.sft"
+
+    #hunyuan
+    #"https://huggingface.co/calcuis/hunyuan-gguf/resolve/main/hunyuan_video_vae_bf16.safetensors"
+)
+
+ESRGAN_MODELS=(
+#    "https://huggingface.co/Phips/4xNomos8kDAT/resolve/main/4xNomos8kDAT.safetensors"
+#    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+#    "https://huggingface.co/naonovn/total/resolve/main/x1_ITF_SkinDiffDetail_Lite_v1.pth"
+)
+
+INSIGHTFACE_MODELS=(
+#    "https://huggingface.co/Devia/G/resolve/main/inswapper_128.onnx"
+)
+
+ANTELOPE_MODELS=(
+#    "https://huggingface.co/typhoon01/aux_models/resolve/main/1k3d68.onnx"
+#    "https://huggingface.co/typhoon01/aux_models/resolve/main/2d106det.onnx"
+#    "https://huggingface.co/typhoon01/aux_models/resolve/main/genderage.onnx"
+#    "https://huggingface.co/typhoon01/aux_models/resolve/main/glintr100.onnx"
+#    "https://huggingface.co/typhoon01/aux_models/resolve/main/scrfd_10g_bnkps.onnx"
+)
+
+PULID_MODELS=(
+#  "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.1.safetensors"
+)
+
+LLM_MODELS=(
+#  "https://huggingface.co/bartowski/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3-Q5_K_M.gguf"
+)
+
+ULTRALYTICS_MODELS=(
+#  "https://huggingface.co/jags/yolov8_model_segmentation-set/resolve/main/skin_yolov8m-seg_400.pt"
+)
+
+CONTROLNET_MODELS=(
+    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
+)
+
+### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
+
+function provisioning_start() {
+    if [[ ! -d /opt/environments/python ]]; then 
+        export MAMBA_BASE=true
+    fi
+    source /opt/ai-dock/etc/environment.sh
+    source /opt/ai-dock/bin/venv-set.sh comfyui
+
+#    if provisioning_has_valid_hf_token; then
+#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors")
+#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors")
+#    else
+#        UNET_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors")
+#        VAE_MODELS+=("https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors")
+#        sed -i 's/flux1-dev\.safetensors/flux1-schnell.safetensors/g' /opt/ComfyUI/web/scripts/defaultGraph.js
+#    fi
+
+    provisioning_print_header
+    provisioning_get_apt_packages
+    provisioning_get_nodes
+    provisioning_get_pip_packages
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/checkpoints/SDXL" \
+        "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/unet" \
+        "${UNET_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip" \
+        "${CLIP_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/lora/FLUX" \
+        "${LORA_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/controlnet" \
+        "${CONTROLNET_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/vae" \
+        "${VAE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
+        "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models" \
+        "${INSIGHTFACE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/insightface/models/antelopev2" \
+        "${ANTELOPE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/pulid/" \
+        "${PULID_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/llm_gguf/" \
+        "${LLM_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ultralytics/segm/" \
+        "${ULTRALYTICS_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/Yolov8/" \
+        "${ULTRALYTICS_MODELS[@]}"
+    provisioning_get_workflows
+    provisioning_print_end
+}
+
+function pip_install() {
+    if [[ -z $MAMBA_BASE ]]; then
+            "$COMFYUI_VENV_PIP" install --no-cache-dir "$@"
+        else
+            micromamba run -n comfyui pip install --no-cache-dir "$@"
+        fi
+}
+
+function provisioning_get_apt_packages() {
+    if [[ -n $APT_PACKAGES ]]; then
+            sudo $APT_INSTALL ${APT_PACKAGES[@]}
+    fi
+}
+
+function provisioning_get_pip_packages() {
+    if [[ -n $PIP_PACKAGES ]]; then
+            pip_install ${PIP_PACKAGES[@]}
+    fi
+}
+
+function provisioning_get_nodes() {
+    for repo in "${NODES[@]}"; do
+        dir="${repo##*/}"
+        path="/opt/ComfyUI/custom_nodes/${dir}"
+        requirements="${path}/requirements.txt"
+        if [[ -d $path ]]; then
+            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
+                printf "Updating node: %s...\n" "${repo}"
+                ( cd "$path" && git pull )
+                if [[ -e $requirements ]]; then
+                   pip_install -r "$requirements"
+                fi
+            fi
+        else
+            printf "Downloading node: %s...\n" "${repo}"
+            git clone "${repo}" "${path}" --recursive
+            if [[ -e $requirements ]]; then
+                pip_install -r "${requirements}"
+            fi
+        fi
+    done
+}
+
+function provisioning_get_workflows() {
+    for repo in "${WORKFLOWS[@]}"; do
+        dir=$(basename "$repo" .git)
+        path="/opt/ComfyUI/user/default/workflows/${dir}"
+        if [[ -d "$path" ]]; then
+            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
+                printf "Updating workflows: %s...\n" "${repo}"
+                ( cd "$path" && git pull )
+            fi
+        else
+            printf "Cloning workflows: %s...\n" "${repo}"
+            git clone "$repo" "$path"
+        fi
+    done
+}
+
+function provisioning_get_default_workflow() {
+    if [[ -n $DEFAULT_WORKFLOW ]]; then
+        workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
+        if [[ -n $workflow_json ]]; then
+            echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
+        fi
+    fi
+}
+
+function provisioning_get_models() {
+    if [[ -z $2 ]]; then return 1; fi
+    
+    dir="$1"
+    mkdir -p "$dir"
+    shift
+    arr=("$@")
+    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
+    for url in "${arr[@]}"; do
+        printf "Downloading: %s\n" "${url}"
+        provisioning_download "${url}" "${dir}"
+        printf "\n"
+    done
+}
+
+function provisioning_print_header() {
+    printf "\n##############################################\n#                                            #\n#          Provisioning container            #\n#                                            #\n#         This will take some time           #\n#                                            #\n# Your container will be ready on completion #\n#                                            #\n##############################################\n\n"
+    if [[ $DISK_GB_ALLOCATED -lt $DISK_GB_REQUIRED ]]; then
+        printf "WARNING: Your allocated disk size (%sGB) is below the recommended %sGB - Some models will not be downloaded\n" "$DISK_GB_ALLOCATED" "$DISK_GB_REQUIRED"
+    fi
+}
+
+function provisioning_print_end() {
+    printf "\nProvisioning complete:  Web UI will start now\n\n"
+}
+
+function provisioning_has_valid_hf_token() {
+    [[ -n "$HF_TOKEN" ]] || return 1
+    url="https://huggingface.co/api/whoami-v2"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $HF_TOKEN" \
+        -H "Content-Type: application/json")
+
+    # Check if the token is valid
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function provisioning_has_valid_civitai_token() {
+    [[ -n "$CIVITAI_TOKEN" ]] || return 1
+    url="https://civitai.com/api/v1/models?hidden=1&limit=1"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $CIVITAI_TOKEN" \
+        -H "Content-Type: application/json")
+
+    # Check if the token is valid
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Download from $1 URL to $2 file path
+function provisioning_download() {
+    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        auth_token="$HF_TOKEN"
+#    elif
+#        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+#        auth_token="$CIVITAI_TOKEN"
+#    fi
+#    if [[ -n $auth_token ]];then
+        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    else
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    fi
+}
+
+provisioning_start
